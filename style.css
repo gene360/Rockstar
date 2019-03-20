@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow');
+@import "compass/css3";
+
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+
+/* prettier-ignore */
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* prettier-ignore */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+/* Body */
+body {
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Utseende på scrollbar */
+body::-webkit-scrollbar {
+    width: 1.5vh;
+    background: #0b1c33;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 16, 158, 0.575);
+}
+
+/* Header bakgrund layout */
+.layout-bg {
+    /* Bakgrund bild */
+    background: url(./bilder/bg.gif);
+
+    /* Bakgrundens storlek och position */
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+    /* Sätter h1 i mitten */
+    display: grid;
+    align-items: center;
+}
+
+.header-ikon {
+    position: fixed;
+    top: 5vh;
+    padding: 2% 2%;
+    display: block;
+    z-index: 999;
+}
+.header-ikon>img {
+    display: block;
+    max-width: 15vh;
+}
+
+.h1-wrapper {
+    font-weight: bolder;
+    color: #ffffff;
+    font-size: 3vw;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+
+/* Main content layout */
+.container-content {
+    background: linear-gradient(to bottom, #1b1b1b 80%, rgb(38, 38, 58) 100%);
+}
+
+/* En kontainer för länkarna (Stream-Cards) */
+.container-meny-kort {
+    width: 100%;
+    position: relative;
+    top: -1.2rem;
+}
+
+/* Den div box som håller länkarna på plats (Stream cards) */
+.stream-cards {
+    width: 90%;
+    margin: 0 auto;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Storlek och position för div och en animation för hover (Transition)*/
+.stream-cards div {
+    width: 340px;
+    height: 360px;
+    position: relative;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    transform: scale(0.95, 0.95);
+    transition: transform 200ms, box-shadow 400ms;
+    margin: 0 40px;
+}
+
+/* Hover över div box */
+.stream-cards div:hover {
+    box-shadow: inset 0 0 50px rgba(0, 110, 255, 0.753);
+}
+
+/* Transform effect */
+.bild1:hover,
+.bild2:hover,
+.bild3:hover {
+    transform: scale(1.1, 1.1);
+}
+
+/* Bilder till länkarna */
+.bild1 {
+    background: url(./bilder/bild1.jpg);
+}
+
+.bild2 {
+    background: url(./bilder/bild2.jpg);
+}
+
+.bild3 {
+    background: url(./bilder/bild3.jpg);
+}
+
+/* Storlek på länk */
+.stream-cards>div a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+/* Storlek på h1 och position */
+.stream-cards div h1 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    display: block;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: #0000001f;
+    line-height: 50px;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+.stream-cards div:hover h1 {
+    background: rgba(0, 0, 0, 0.651);
+}
