@@ -28,6 +28,7 @@ ul {
 /* Body */
 body {
     font-family: 'Barlow', sans-serif;
+    color: #ffff;
 }
 
 /* Utseende på scrollbar */
@@ -74,10 +75,8 @@ body::-webkit-scrollbar-thumb {
 
 .h1-wrapper {
     font-weight: bolder;
-    color: #ffffff;
     font-size: 3vw;
     text-align: center;
-    color: rgb(255, 255, 255);
 }
 
 /* Main content layout */
@@ -102,6 +101,9 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     position: relative;
     justify-content: center;
+}
+.wrappershit {
+    text-align: center;
 }
 
 /* Storlek och position för div och en animation för hover (Transition)*/
@@ -165,7 +167,6 @@ body::-webkit-scrollbar-thumb {
     margin: 0 auto;
     background: #0000001f;
     line-height: 50px;
-    color: #fff;
     transition: background 0.3s;
 }
 .stream-cards div:hover h1 {
@@ -173,13 +174,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 .footer-container {
-    width: auto;
-    height: 50px;
+    height: 15vh;
     background: #000000;
+
+    display: grid;
+    align-items: center;
+    font
 }
-.footer-container > h2 {
-    color: #fff;
-    margin: 0 auto;
+.obama {
+    text-align: center;
 }
 
 /* Responsive: Ipad Pro och Ipad (Landscape) */
