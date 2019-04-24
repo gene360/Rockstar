@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow');
-@import "compass/css3";
 
 /* Enkel CSS-reset */
 html {
@@ -81,10 +80,10 @@ body::-webkit-scrollbar-thumb {
     color: rgb(255, 255, 255);
 }
 
-
 /* Main content layout */
 .container-content {
     background: linear-gradient(to bottom, #1b1b1b 80%, rgb(38, 38, 58) 100%);
+    height: auto;
 }
 
 /* En kontainer för länkarna (Stream-Cards) */
@@ -92,6 +91,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     position: relative;
     top: -1.2rem;
+
 }
 
 /* Den div box som håller länkarna på plats (Stream cards) */
@@ -100,12 +100,13 @@ body::-webkit-scrollbar-thumb {
     margin: 0 auto;
     height: 400px;
     display: flex;
+    position: relative;
     justify-content: center;
 }
 
 /* Storlek och position för div och en animation för hover (Transition)*/
 .stream-cards div {
-    width: 340px;
+    width: 360px;
     height: 360px;
     position: relative;
     border-radius: 5px;
@@ -113,7 +114,7 @@ body::-webkit-scrollbar-thumb {
     background-position: center;
     transform: scale(0.95, 0.95);
     transition: transform 200ms, box-shadow 400ms;
-    margin: 0 40px;
+    margin: 0 5px;
 }
 
 /* Hover över div box */
@@ -167,7 +168,61 @@ body::-webkit-scrollbar-thumb {
     color: #fff;
     transition: background 0.3s;
 }
-
 .stream-cards div:hover h1 {
     background: rgba(0, 0, 0, 0.651);
+}
+
+.footer-container {
+    width: auto;
+    height: 50px;
+    background: #000000;
+}
+.footer-container > h2 {
+    color: #fff;
+    margin: 0 auto;
+}
+
+/* Responsive: Ipad Pro och Ipad (Landscape) */
+@media (max-width: 1024px) {
+    .header-ikon>img {
+        max-width: 12vh;
+    }
+    .h1-wrapper {
+        font-size: 5vw;
+    }
+}
+
+/* Responsive: Ipad och Ipad Pro (Portrait) */
+@media (max-width: 820px) {
+    .header-ikon>img {
+        display: block;
+        max-width: 17vh;
+    }
+    .h1-wrapper {
+        font-size: 5vw;
+    }
+    .stream-cards {
+        height: auto;
+        display: grid;
+    }
+    .stream-cards div {
+        height: 380px;
+    }
+}
+/* Mobil */
+@media (max-width: 450px) {
+    .header-ikon>img {
+        display: block;
+        max-width: 12vh;
+    }
+    .h1-wrapper {
+        font-size: 7vw;
+    }
+    .stream-cards {
+        width: 80%;
+    }
+    .stream-cards div {
+        width: 240px;
+        height: 280px;
+    }
 }

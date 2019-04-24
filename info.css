@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow|PT+Sans');
+
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+/* prettier-ignore */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/* prettier-ignore */
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    color: #ffffff;
+}
+body h1 {
+    
+}
+body h2 {
+    
+}
+/* Utseende på scrollbar */
+body::-webkit-scrollbar {
+    width: 1.5vh;
+    background: #0b1c33;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 16, 158, 0.575);
+}
+
+header .wrapper {
+    /* Sätter layout-bg och head-content på rad */
+    display: flex;
+}
+header .layout-bg {
+    /* Bakgrund */
+    background: url(./bilder/bg2.gif);
+
+    /* Position och storlek på bakgrunden */
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: left;
+    width: 50%;
+    height: 100vh;
+}
+header .header-content {
+    width: 50%; 
+    background: linear-gradient(to bottom, #1b1b1b 80%, rgb(38, 38, 58) 100%);
+    padding: 4%;
+}
+header h2 {
+    font-size: 6vh;
+}
