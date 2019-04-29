@@ -37,23 +37,39 @@ body::-webkit-scrollbar-thumb {
 header .wrapper {
     /* Sätter layout-bg och head-content på rad */
     display: flex;
-}
-header .layout-bg {
+} 
+
+header .layout-bg1 {
     /* Bakgrund */
-    background: url(./bilder/bg2.gif);
+    background: url(./bilder/test.gif);
 
     /* Position och storlek på bakgrunden */
-    background-attachment: fixed;
-    background-size: contain;
-    background-position: left;
     width: 50%;
     height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-header .header-content {
-    width: 50%; 
-    background: linear-gradient(to bottom, #1b1b1b 80%, rgb(38, 38, 58) 100%);
-    padding: 4%;
+header .layout-bg2 {
+    /* Bakgrund */
+    background: url(./bilder/test2.gif);
+
+    /* Position och storlek på bakgrunden */
+    width: 50%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 header h1 {
-    font-size: 6vh;
+    /* Storleken för h1 */
+    width: 100%;
+    top: 50%;
+    font-size: 4vw;
+
+    /* Postiton för h1 */
+    position: absolute;
+    text-align: center;
+}
+main .main-container {
+    width: auto;
+    height: 60vh;
 }

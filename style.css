@@ -90,7 +90,6 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     position: relative;
     top: -1.2rem;
-
 }
 
 /* Den div box som håller länkarna på plats (Stream cards) */
@@ -179,7 +178,6 @@ body::-webkit-scrollbar-thumb {
 
     display: grid;
     align-items: center;
-    font
 }
 .obama {
     text-align: center;
