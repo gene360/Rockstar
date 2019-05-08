@@ -28,7 +28,7 @@ ul {
 /* Body */
 body {
     font-family: 'Barlow', sans-serif;
-    color: #ffff;
+    color: rgb(255, 255, 255);
 }
 
 /* Utseende på scrollbar */
@@ -46,7 +46,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Header bakgrund layout */
-.layout-bg {
+.header-container {
     /* Bakgrund bild */
     background: url(./bilder/bg.gif);
 
@@ -60,7 +60,7 @@ body::-webkit-scrollbar-thumb {
     display: grid;
     align-items: center;
 }
-
+/* wrapper för ikon, position */
 .header-ikon {
     position: fixed;
     top: 5vh;
@@ -68,19 +68,18 @@ body::-webkit-scrollbar-thumb {
     display: block;
     z-index: 999;
 }
+/* Storlek för bilden ikon.gif */
 .header-ikon>img {
-    display: block;
     max-width: 15vh;
 }
-
+/* Wrapper för h1 (storlek och position) */
 .h1-wrapper {
-    font-weight: bolder;
     font-size: 3vw;
     text-align: center;
 }
 
 /* Main content layout */
-.container-content {
+.main-container {
     background: linear-gradient(to bottom, #1b1b1b 80%, rgb(38, 38, 58) 100%);
     height: auto;
 }
@@ -89,27 +88,27 @@ body::-webkit-scrollbar-thumb {
 .container-meny-kort {
     width: 100%;
     position: relative;
-    top: -1.2rem;
+    top: -20px;
 }
 
 /* Den div box som håller länkarna på plats (Stream cards) */
 .stream-cards {
-    width: 90%;
+    /* Storlek för div boxarna */
     margin: 0 auto;
+    width: 90%;
     height: 400px;
+    font-size: 20px;
+
+    /* Gör så att div boxarna ligger på rad */
     display: flex;
-    position: relative;
+    /* Sätter div boxarna för resposive i mitten */
     justify-content: center;
-}
-.wrappershit {
-    text-align: center;
 }
 
 /* Storlek och position för div och en animation för hover (Transition)*/
 .stream-cards div {
     width: 360px;
     height: 360px;
-    position: relative;
     border-radius: 5px;
     background-size: cover;
     background-position: center;
@@ -130,16 +129,19 @@ body::-webkit-scrollbar-thumb {
     transform: scale(1.1, 1.1);
 }
 
-/* Bilder till länkarna */
+/* Bilder för stream cards boxarna och länkarna  */
 .bild1 {
+    /* Info bild*/
     background: url(./bilder/bild1.jpg);
 }
 
-.bild2 {
+.bild2 {    
+    /* Merch bild */
     background: url(./bilder/bild2.jpg);
 }
 
 .bild3 {
+    /*  Tour bild */
     background: url(./bilder/bild3.jpg);
 }
 
@@ -148,82 +150,95 @@ body::-webkit-scrollbar-thumb {
     display: block;
     width: 100%;
     height: 100%;
-    position: relative;
-    z-index: 10;
 }
 
 /* Storlek på h1 och position */
-.stream-cards div h1 {
+.stream-cards div h2 {
+    /* Position och storlek för div h2 boxen */
     text-align: center;
-    font-family: 'Raleway', sans-serif;
-    display: block;
     width: 100%;
-    height: 50px;
     position: absolute;
     bottom: 5%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    background: #0000001f;
     line-height: 50px;
+
+    /* Box shadow til h2s */
+    box-shadow: inset 0 0 50px rgba(27, 28, 29, 0.753);
+    
+    /* Hastighet för transition */
     transition: background 0.3s;
 }
-.stream-cards div:hover h1 {
+
+/* Färg animationen, går från ljus till mörk */
+.stream-cards div:hover h2 {
+    /* Färgen */
     background: rgba(0, 0, 0, 0.651);
 }
 
+/* Footer layout */
 .footer-container {
+    /* Höjd och färg för footer */
     height: 15vh;
-    background: #000000;
+    background: rgb(0, 0, 0);
 
+    /* Position */
     display: grid;
     align-items: center;
 }
-.obama {
+
+/* Sätter h2 i mitten */
+.footer-content {
     text-align: center;
 }
 
-/* Responsive: Ipad Pro och Ipad (Landscape) */
+/* Responsive: Ipad Pro och Ipad (Landscape och potrait) */
 @media (max-width: 1024px) {
     .header-ikon>img {
         max-width: 12vh;
     }
     .h1-wrapper {
-        font-size: 5vw;
+        font-size: 4vw;
+    }
+    .stream-cards {
+        font-size: 20px;
     }
 }
 
 /* Responsive: Ipad och Ipad Pro (Portrait) */
 @media (max-width: 820px) {
     .header-ikon>img {
-        display: block;
-        max-width: 17vh;
+        max-width: 14vh;
     }
     .h1-wrapper {
-        font-size: 5vw;
+        font-size: 4vw;
+    }
+    .container-meny-kort {
+        top: -35px;
     }
     .stream-cards {
+        font-size: 25px;
         height: auto;
         display: grid;
     }
     .stream-cards div {
         height: 380px;
+        margin: 8px 5px;
     }
 }
 /* Mobil */
 @media (max-width: 450px) {
     .header-ikon>img {
-        display: block;
         max-width: 12vh;
     }
     .h1-wrapper {
-        font-size: 7vw;
+        font-size: 5vw;
     }
     .stream-cards {
         width: 80%;
+        font-size: 20px;
     }
     .stream-cards div {
         width: 240px;
         height: 280px;
+        margin: 5px 5px;
     }
 }

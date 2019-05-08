@@ -17,7 +17,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 /* Body */
 body {
     font-family: 'Barlow', sans-serif;
-    color: #ffff;
+    color: rgb(255, 255, 255);
 }
 
 /* Utseende på scrollbar */
@@ -34,7 +34,7 @@ body::-webkit-scrollbar-thumb {
     background-color: rgba(0, 16, 158, 0.575);
 }
 
-header .wrapper {
+header .layout-wrapper {
     /* Sätter layout-bg och head-content på rad */
     display: flex;
 } 
@@ -69,7 +69,31 @@ header h1 {
     position: absolute;
     text-align: center;
 }
+
 main .main-container {
-    width: auto;
     height: 60vh;
+    background: linear-gradient(to bottom, #1b1b1b 80%, rgb(38, 38, 58) 100%);
+}
+main .row {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+main .info-bild {
+    background: url(./bilder/info1.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    
+    position: relative;
+    top: 28px;
+
+    margin: 0 50px 10% 50px;
+
+    width: 40%;
+}
+main .info-text {
+    width: 60%;
+    margin-right: 120px;
+    position: relative;
+    top: 28px;
 }
